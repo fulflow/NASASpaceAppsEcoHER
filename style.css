@@ -153,12 +153,24 @@ nav {
 
 .header__container {
   display: grid;
-  gap: 2rem;
-  overflow: hidden;
+  gap: 1rem;
+
+
+  width: 100%;
 }
 
+.header__content {
+
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+
 .header__image img {
-  max-width: 800px;
+  max-width: 500px;
   margin-inline: auto;
 }
 
@@ -184,7 +196,7 @@ nav {
 }
 
 .special__container :is(.section__header, .section__description) {
-  max-width: 600px;
+  max-width: 100%;
   margin-inline: auto;
 }
 
@@ -698,18 +710,18 @@ nav {
 }
 
 sectionextra {
-    margin: 20px 10px;
-    padding: 20px;
-    background: linear-gradient(to bottom, #dde4ee, #e3e1f4);
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    border-radius: 8px;
+  margin: 20px 10px;
+  padding: 20px;
+  background: linear-gradient(to bottom, #dde4ee, #e3e1f4);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
 }
 
 .chat-container {
   margin: 20px 10px;
   padding: 20px;
   background: #f1f5f0;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
 }
 

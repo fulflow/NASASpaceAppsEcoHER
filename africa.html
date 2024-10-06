@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Our Game</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+  <script>
+  window.onscroll = function() {myFunction()};
+
+  var navbar = document.getElementById("navbar");
+  var sticky = navbar.offsetTop;
+
+  function myFunction() {
+    if (window.pageYOffset >= sticky) {
+      navbar.classList.add("sticky")
+    } else {
+      navbar.classList.remove("sticky");
+    }
+  }
+  </script>
+
+<body>
+
+  <div id="navbar">
+    <a class="active" href="index.html">Home</a>
+    <a href="bot.html">AI Assistant</a>
+    <a href="library.html">Map</a>
+    <a href="africa.html">Africa</a>
+    <a href="india.html">India</a>
+  </div>
+  <header>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcLLZQo6iFuYBZVpKD-2RlRaMd3sKDEQrmYw&s" alt="Header Image" width="50%">
+    <div class="header-text">
+      <h1>Africa</h1>
+      <p>Empowering Women to Code to tackle Climate Change</p>
+    </div>
+  </header>
+
+
+  <br></br>
+
+  <script src="https://wizard-orpheus.hackclub.dev/wizard_orpheus.js"></script>
+  <script src="script.js"></script>
+
+</body>
+
+</html>
+
+
+
+

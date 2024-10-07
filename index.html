@@ -22,51 +22,59 @@
       </div>
     </div>
     <ul class="nav__links" id="nav-links">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#special">The Problem</a></li>
-      <li><a href="#chef">Chef</a></li>
-      <li><a href="#client">Clients</a></li>
-      <li><a href="#contact">Contact Us</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="india.html">India</a></li>
+      <li><a href="kenya.html">Kenya</a></li>
+      <li><a href="philippines.html">Philippines</a></li>
+      <li><a href="pakistan.html">Pakistan</a></li>
+
     </ul>
-    <div class="nav__btn">
-      <button class="btn"><i class="ri-shopping-bag-fill"></i></button>
-    </div>
   </nav>
-  <header class="section__container header__container" id="home">
-    <div class="header__image">
-      <img src="assets/character.png" alt="header" />
-    </div>
 
-    <div class="header__content">
-      <h1>👋 Hey there, <span>I’m Asha</span>.</h1>
-      <h3>I'm your guide on this journey to better understand our changing environment!</h3>
 
-      <p class="section__description">
-      <p>
-
-      </p>
-      👇 Click the locations on the map below to explore different regions and see how climate change impacts us in
-      rural areas.
-      You’ll also learn practical ways we can adapt and find solutions right here in our village!
-      </p>
-    </div>
-  </header>
   <section class="section__container special__container" id="special">
-    <h2 class="section__header"> The Problem. </h2>
-    <p class="section__description">
-      While climate change and gender may not seem immediately connected, there’s actually a deep and significant
-      relationship between them. The climate crisis disproportionately impacts women and girls, worsening existing
-      gender inequalities. Women rely heavily on natural resources but have less access to them, and they often bear the
-      main responsibility for securing food, water, and fuel. In low-income countries, they are deeply involved in
-      agriculture but face more significant challenges adapting to climate change due to limited access to land, credit,
-      and technology. Cultural norms, childcare duties, and poverty further restrict their mobility and opportunities,
-      often forcing girls out of school to help at home. Climate-related stress also increases the risk of violence,
-      trafficking, and exploitation, leaving women especially vulnerable during crises.
+    <h2 class="section__header"> Climate Change and Gender Inequality Crisis </h2>
+    <p class="section__introdescription">
+      The climate crisis is intricately linked to gender inequality, particularly in agricultural contexts. Women make
+      up nearly 43% of the agricultural labor force in developing countries, yet they often rely on outdated farming
+      practices that are ill-suited to today’s environmental challenges. Many women farmers continue to use traditional
+      techniques that have been passed down for generations, which can hinder productivity and sustainability.
 
-      That’s why we’ve created this website—to spread awareness and advocate for meaningful change.
+      These outdated practices are exacerbated by the disproportionate impact of climate change on women and girls. In
+      low-income countries, women are primarily responsible for securing food, water, and fuel for their families, yet
+      they have limited access to land, credit, and modern agricultural technologies. Cultural norms and childcare
+      responsibilities further restrict their mobility and opportunities, often forcing young girls out of school to
+      assist at home..<br><br>
+      Our website serves as a platform to spread awareness and advocate for these essential changes, promoting a
+      brighter future for women and their communities. We also suggest innovative solutions to these problems that can help them thrive in the face of climate challenges.
     <p>
       <br></br>
     </p>
+
+
+    <header class="section__container header__container" id="home">
+      <div class="header__image">
+        <img src="assets/character.png" alt="header" style="max-width: 300px;" />
+      </div>
+
+
+
+      <div class="header__content">
+        <h1>👋 Hey there, <span>I’m Asha!</span></h1>
+        <h3>I am here to guide you in adopting modern agricultural techniques that are both environmentally friendly and
+          financially beneficial for female farmers.</h3>
+
+        <p class="section__description">
+        <p>
+
+        </p>
+        👇 Click the locations on the map below to explore different regions and see how climate change impacts women in
+        rural areas.
+        You’ll also learn practical ways you can adapt and find solutions right here in your home or village!
+        </p>
+      </div>
+    </header>
+
     <div id="map"></div>
 
     <div class="special__grid">
@@ -123,14 +131,11 @@
 
   <!-- AI Assistant -->
   <section class="section__container special__container" id="special">
-    <h2 class="section__header">AI Assistant</h2>
+    <h2 class="section__header">Ask Questions to Asha</h2>
     <p class="section__description">
-      Welcome to our <b>AI</b> Assistant that offers personalized
-      advice and support. It also provides guidance for learning more about climate change. Feel free to ask any
-      questions, clear doubts, or even just chat! Additionally, our AI assistant is <b>multilingual</b>, making it
-      more accessible to all.
+      Climate Change Guide, <b>Asha</b> offers personalized
+      advice and support. She provides guidance for learning more about <b>climate change, gender equality, and more!</b> Feel free to ask any questions, clear doubts, or even just chat. Additionally, she is <b>multilingual</b>, so you can ask in any language you prefer.  
     </p>
-
 
     <section id="bot">
       <br></br>
@@ -140,7 +145,7 @@
           <li class="bot-message">
             <span class="bot-avatar"></span>
             <div class="bot-bubble">
-              Hello! How can I assist you today with questions or information on climate change?
+              Hello! How can I assist you today? I can help you learn more about climate and gender equality 😊
             </div>
           </li>
         </ul>
@@ -161,9 +166,9 @@
   <script>
     function initMap() {
       // Define map options
-      const location = {lat: 2.38, lng: 62.51}; // New York City
+      const location = {lat: 17.0206, lng: 76.7324}; // New York City
       const mapOptions = {
-        zoom: 3, // Better zoom level for city view
+        zoom: 3,
         center: location,
         mapId: '3f5f2168f877ec31' // Custom Map ID
       };
@@ -174,38 +179,32 @@
       // Define locations with info
       const locations = [
         {
-          position: {lat: 30.0668, lng: 79.0193},
+          position: {lat: 30.0668, lng: 79.0193}, // Uttarakhand, India
           title: "Uttarakhand, India",
-          info: "Here, women face the brunt of climate change, struggling with melting glaciers, erratic rainfall, and resource scarcity.",
+          info: "In Uttarakhand, women face challenges due to unpredictable monsoons and landslides, which disproportionately affect their ability to manage agricultural activities. Click here to learn more.",
           url: "india.html"
         },
         {
-          position: {lat: 1.2921, lng: 36.8219},
-          title: "Kenya, Africa",
-          info: "Here in Kenya, women face the challenges of climate change, with prolonged droughts and resource scarcity threatening their livelihoods and access to clean water.",
-          url: "https://www.brooklyn.com"
-        },
-        {
-          position: {lat: 12.8797, lng: 121.7740},  // The Philippines
-          title: "The Philippines",
-          info: "Here in the Philippines, women bear the brunt of climate-related disasters like typhoons and rising sea levels, impacting their homes, livelihoods, and safety.",
-          url: "https://example-philippines.com"
-        },
-
-        {
-          position: {lat: 25.8943, lng: 68.5247},  // Sindh, Pakistan
+          position: {lat: 25.8943, lng: 68.5247}, // Sindh, Pakistan
           title: "Sindh, Pakistan",
-          info: "Here in Sindh, Pakistan, women grapple with the effects of extreme heat, water shortages, and floods, while their access to essential resources remains limited.",
-          url: "https://example-sindh.com"
+          info: "Women in Sindh struggle with extreme heat waves and water scarcity, impacting both their health and their roles in agriculture. Click here to learn more.",
+          url: "pakistan.html"
+        },
+
+        {
+          position: {lat: 13.4132, lng: 122.5637}, // Philippines
+          title: "Philippines",
+          info: "Women in the Philippines deal with the rising frequency of typhoons, which displace families and create challenges in accessing essential resources. Click here to learn more.",
+          url: "philippines.html"
         },
         {
-          position: {lat: -30.5595, lng: 22.9375},  // South Africa
-          title: "South Africa",
-          info: "Here in South Africa, women are disproportionately affected by climate change, with erratic rainfall and droughts straining agriculture and access to water in rural areas.",
-          url: "https://example-southafrica.com"
+          position: {lat: -1.2921, lng: 36.8219}, // Kenya, Africa
+          title: "Kenya, Africa",
+          info: "In Kenya, women are disproportionately affected by prolonged droughts and erratic rainfall, making it harder to access clean water and sustain livelihoods. Click here to learn more.",
+          url: "kenya.html"
         }
-
       ];
+
 
       // Create markers and InfoWindows for each location
       locations.forEach(locationData => {
@@ -244,6 +243,8 @@
   <!-- Load Google Maps JavaScript API -->
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDiASXbsA_yxM7TVFp9_fECz-Lmk3ixe3w&callback=initMap"
     async defer></script>
+
+
 
 
 </body>

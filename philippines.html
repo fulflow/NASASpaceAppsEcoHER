@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="style.css" />
+
+  <title>EcoHer</title>
+  <style>
+    .special__grid {
+      display: flex;
+      /* Use flexbox */
+      justify-content: center;
+      /* Center items horizontally */
+      gap: 20px;
+      /* Optional: Add space between cards */
+    }
+
+    .special__card {
+      flex: 1;
+      /* Make cards take equal space */
+    }
+
+
+    .btn1 {
+      background-color: #D3D3D3;
+      color: black;
+      border: none;
+      border-radius: 20px;
+      padding: 8px 16px;
+      font-size: 12px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .btn1:hover {
+      background-color: #acacac;
+      transform: translateY(-2px);
+    }
+
+    .btn1:disabled {
+      background-color: #ccc;
+      color: #666;
+      cursor: not-allowed;
+      box-shadow: none;
+    }
+
+    .button-container {
+      display: flex;
+      margin-inline-start: 10px;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <div class="nav__header">
+      <div class="logo nav__logo">
+        <a href="index.html">Eco<span>HER</span></a>
+      </div>
+      <div class="nav__menu__btn" id="menu-btn">
+        <span><i class="ri-menu-line"></i></span>
+      </div>
+    </div>
+    <ul class="nav__links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="india.html">India</a></li>
+      <li><a href="kenya.html">Kenya</a></li>
+      <li><a href="philippines.html">Philippines</a></li>
+      <li><a href="pakistan.html">Pakistan</a></li>
+    </ul>
+  </nav>
+
+  </nav>
+  <header class="section__container header__container" id="home">
+    <div class="header__image">
+      <img src="assets/philippines.webp" alt="header" style="max-width: 300px" />
+      <img src="assets/character.png" alt="header" style="max-width: 275px;" />
+    </div>
+
+    <!--First page-->
+    <div class="header__content">
+      <h1>You arrived at <span>Philippines!</span></h1>
+      <h3>Oh, what is happening here?</h3>
+
+      <div class="chat-container" id="chatContainer">
+      </div>
+      <div class="button-container">
+        <button class="btn1" id="prevButton" onclick="prevMessage()">← Previous</button>
+        <button class="btn1" id="nextButton" onclick="nextMessage()">Next →</button>
+      </div>
+    </div>
+
+    <script src="message3.js"></script>
+    </div>
+
+
+    <button class="btn" onclick="scrollToSection()"> Let's go discover more <br>about the problems here 🔍</a></button>
+
+    </div>
+    </div>
+  </header>
+
+
+  <section class="section__container special__container" id="problem-section">
+
+    <p class="section__header">
+      We’re about to embark on a quest to solve some major challenges for women in Philippines. <br><br> Pick one
+      problem below, <br>and I’ll guide you through the solutions!
+    </p>
+
+
+    <div class="special__grid">
+      <!-- Water Scarcity Card -->
+      <div class="special__card">
+        <img src="assets/labor.png" alt="special" />
+        <h4>Labor Burden</h4>
+        <p>Extreme weather events such as typhoons and floods have a greater impact on women due to their traditional
+          roles as caregivers and food providers.
+        </p>
+        <button class="btn1" id="openPopupP1">Solutions</button>
+
+        <div id="popupP1" class="popup"
+          style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 90%; max-width: 500px; max-height: 80%; background-color: white; padding: 20px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); overflow-y: auto; border-radius: 10px; z-index: 1000;">
+          <h2>Solutions for Labor Burden</h2>
+          <p><b>Upgrading Flood Defenses: </b>- Sea Walls and Levees: Coastal and low-lying regions in the Philippines
+            are highly susceptible to typhoon surges and rising sea levels. Reinforcing existing sea walls and building
+            new levees can help protect coastal cities like Manila, Tacloban, and Cebu. These structures act as physical
+            barriers to rising waters and prevent flooding from typhoons or storm surges.<img src="assets/labor1.png"
+              style="max-width: 100%; height: auto;">- Elevated Roads and Bridges: Roads and bridges in flood-prone
+            areas need to be elevated to prevent them from being submerged during heavy rains or typhoons, ensuring
+            connectivity during disasters.
+          </p>
+          <p><b>Green infrastructure: </b>Implement nature-based solutions like planting mangroves, restoring wetlands,
+            and creating urban green spaces to absorb floodwater.
+          </p>
+
+          <div class="more-text" id="moreTextP1" style="display: none;">
+
+            <p><b>Existing Solutions:
+</b>The Magna Carta of Women (2009) ensures women’s rights to protection during crises, and the Climate Change Act (2009) adopts a gender-sensitive approach to tackling climate challenges. These policies aim to create a social safety net for communities, anticipating future risks through proactive planning and gender-responsive strategies. <br></br>
+              <b></b>
+            </p>
+          </div>
+          <button class="btn1" id="toggleMoreP1">Show More</button>
+        </div>
+      </div>
+
+      <!-- limited access to resources Card -->
+      <div class="special__card">
+        <img src="assets/resources.jpg" alt="special" />
+        <h4>Limited Access to Resources</h4>
+        <p>There's not much developed resources here for women! They have limited access to resources such as land,
+          credit and technology, which makes it more difficult to adapt to the changing climate. Women in Southeast
+          Asia, especially in rural areas, perform much of the agricultural labor but seldom own lands or tools.
+        </p>
+
+        <button class="btn1" id="openPopupP2">Solutions</button>
+
+        <div id="popupP2" class="popup"
+          style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 90%; max-width: 500px; max-height: 80%; background-color: white; padding: 20px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); overflow-y: auto; border-radius: 10px; z-index: 1000;">
+          <h2>Solutions for Limited Resource Accessibility</h2>
+
+          <p><b>Implement Disaster Preparedness & Response Programs: </b>For example, The Global Precipitation
+            Measurement (GPM) mission provides real-time rainfall data, which can help predict the intensity of upcoming
+            storms and mitigate flood risks. This data can be used for early warning systems to predict typhoons,
+            floods, and droughts, giving communities time to prepare.
+          </p>
+          <p><b>Improve drainage systems: </b>Develop better urban drainage systems and maintain existing ones to reduce
+            water buildup during heavy rains.
+          </p>
+          <p><b>Women-Centered Relief Programs: </b>Ensuring that women, particularly caregivers and heads of
+            households, are provided with the resources they need during disasters is essential. Women should have
+            access to safe spaces in shelters, hygiene products, and childcare.
+          </p>
+          <div class="more-text" id="moreTextP2" style="display: none;">
+            <p><b> Existing Solutions: 
+</b>Sigay Nu Mga Babay, a women-led organization in Maguindanao, Philippines, implemented community gardens to address food shortages during flooding, demonstrating how gender-responsive actions can be effective. 
+              <br></br>
+            <p><b> </b></p>
+            </p>
+          </div>
+          <button class="btn1" id="toggleMoreP2">Show More</button>
+        </div>
+      </div>
+
+
+  </section>
+
+  <script>
+    // Open and close popup logic
+    function openPopup(popupId) {
+      document.getElementById(popupId).style.display = 'block';
+    }
+
+    function closePopup(popupId) {
+      document.getElementById(popupId).style.display = 'none';
+    }
+
+    function toggleMore(buttonId, textId) {
+      const button = document.getElementById(buttonId);
+      const moreText = document.getElementById(textId);
+
+      if (moreText.style.display === 'none') {
+        moreText.style.display = 'block';
+        button.innerHTML = 'Show Less';
+      } else {
+        moreText.style.display = 'none';
+        button.innerHTML = 'Show More';
+      }
+    }
+
+    // Event listeners for opening popups
+    document.getElementById('openPopupP1').addEventListener('click', () => openPopup('popupP1'));
+    document.getElementById('openPopupP2').addEventListener('click', () => openPopup('popupP2'));
+
+
+    // Event listeners for toggling "Show More / Show Less"
+    document.getElementById('toggleMoreP1').addEventListener('click', () => toggleMore('toggleMoreP1', 'moreTextP1'));
+    document.getElementById('toggleMoreP2').addEventListener('click', () => toggleMore('toggleMoreP2', 'moreTextP2'));
+
+
+    // Close popup when clicking outside of it
+    window.addEventListener('click', function (event) {
+      const popupP1 = document.getElementById('popupP1');
+      const popupP2 = document.getElementById('popupP2');
+
+
+      if (popupP1.style.display === 'block' && !popupP1.contains(event.target) && event.target !== document.getElementById('openPopupP1')) {
+        closePopup('popupP1');
+      }
+
+      if (popupP2.style.display === 'block' && !popupP2.contains(event.target) && event.target !== document.getElementById('openPopupP2')) {
+        closePopup('popupP2');
+      }
+
+
+    });
+  </script>
+  <script>
+    function scrollToSection() {
+      const section = document.getElementById("problem-section");
+      section.scrollIntoView({behavior: 'smooth'});
+    }
+  </script>
+</body>
+
+</html>

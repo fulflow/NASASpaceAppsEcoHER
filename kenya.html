@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="style.css" />
+
+  <title>EcoHer</title>
+  <style>
+    .special__grid {
+        display: flex;            /* Use flexbox */
+        justify-content: center;  /* Center items horizontally */
+        gap: 20px;               /* Optional: Add space between cards */
+    }
+
+    .special__card {
+        flex: 1;                 /* Make cards take equal space */
+    }
+    .btn1 {
+      background-color: #D3D3D3;
+      color: black;
+      border: none;
+      border-radius: 20px;
+      padding: 8px 16px;
+      font-size: 12px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .btn1:hover {
+      background-color: #acacac;
+      transform: translateY(-2px);
+    }
+
+    .btn1:disabled {
+      background-color: #ccc;
+      color: #666;
+      cursor: not-allowed;
+      box-shadow: none;
+    }
+
+    .button-container {
+      display: flex;
+      margin-inline-start: 10px;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <div class="nav__header">
+      <div class="logo nav__logo">
+        <a href="index.html">Eco<span>HER</span></a>
+      </div>
+      <div class="nav__menu__btn" id="menu-btn">
+        <span><i class="ri-menu-line"></i></span>
+      </div>
+    </div>
+    <ul class="nav__links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="india.html">India</a></li>
+      <li><a href="kenya.html">Kenya</a></li>
+      <li><a href="philippines.html">Philippines</a></li>
+      <li><a href="pakistan.html">Pakistan</a></li>
+    </ul>
+  </nav>
+
+  </nav>
+  <header class="section__container header__container" id="home">
+    <div class="header__image">
+      <img src="assets/kenya.webp" alt="header" style="max-width: 300px" />
+      <img src="assets/character.png" alt="header" style="max-width: 275px;" />
+    </div>
+
+    <!--First page-->
+    <div class="header__content">
+      <h1>You arrived at <span>Kisumu, Kenya!</span></h1>
+      <h3>Oh, what is happening here?</h3>
+
+      <div class="chat-container" id="chatContainer">
+      </div>
+      <div class="button-container">
+        <button class="btn1" id="prevButton" onclick="prevMessage()">← Previous</button>
+        <button class="btn1" id="nextButton" onclick="nextMessage()">Next →</button>
+      </div>
+    </div>
+
+    <script src="message2.js"></script>
+    </div>
+
+
+    <button class="btn" onclick="scrollToSection()"> Let's go discover more <br>about the problems here 🔍</a></button>
+
+    </div>
+    </div>
+  </header>
+
+
+  <section class="section__container special__container" id="problem-section">
+
+    <p class="section__header">
+      We’re about to embark on a quest to solve some major challenges for Kenya's female farmers. <br><br> Pick one
+      problem below, <br>and I’ll guide you through the solutions!
+    </p>
+
+
+    <div class="special__grid">
+      <!-- Water Scarcity Card -->
+      <div class="special__card">
+        <img src="assets/KenyaPic2.png" alt="special" />
+        <h4>Droughts and Irregular Rainfall</h4>
+        <p>Droughts and irregular rainfall in Kenya severely reduce crop yields and water availability.</p>
+        <button class="btn1" id="openPopupk1">Solutions</button>
+
+        <div id="popupk1" class="popup"
+          style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 90%; max-width: 500px; max-height: 80%; background-color: white; padding: 20px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); overflow-y: auto; border-radius: 10px; z-index: 1000;">
+          <h2>Solutions for Droughts</h2>
+          <p><b>Vertical Farming: </b>Vertical farming utilizes vertically stacked layers to grow crops, maximizing
+            space in urban areas while minimizing water and land usage. This involves techniques like hydroponics, where
+            crops are grown without soil using nutrient-rich water, and aeroponics, where plants receive nutrients
+            through mist. By installing vertical farms in Kisumu’s urban areas, fresh produce can be supplied directly
+            to local markets, improving food security and reducing the strain on water and land resources.</p>
+
+
+          <p>Vertical farms can yield 10-20 times more per square foot compared to traditional farming.
+            Hydroponic systems use up to 90% less water than conventional soil-based growing methods.
+          </p>
+
+          <div class="more-text" id="moreTextk1" style="display: none;">
+
+            <p><b>Economic Benfits: </b> By growing produce locally through vertical farming, transportation costs and
+              emissions are minimized, while also increasing market access. Fresh produce can be supplied directly to
+              urban markets, meeting demand and boosting sales and profits for local female farmers. 
+              <b>Impact on Community: </b> Vertical farming improves food accessibility by providing fresh, nutritious
+              produce in urban areas, enhancing community health, while also creating new job opportunities in farming
+              and technology, empowering women in the workforce.
+            </p>
+          </div>
+          <button class="btn1" id="toggleMorek1">Show More</button>
+        </div>
+      </div>
+
+      <!-- Soil Erosion Card -->
+      <div class="special__card">
+        <img src="assets/kenya2.jpg" alt="special" />
+        <h4>Soil Erosion and Land Degradation</h4>
+        <p> Soil erosion in Kenya worsens land degradation, disproportionately affecting women farmers' productivity and
+          food security. We can fix this!</p>
+
+        <button class="btn1" id="openPopupk2">Solutions</button>
+
+        <div id="popupk2" class="popup"
+          style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 90%; max-width: 500px; max-height: 80%; background-color: white; padding: 20px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); overflow-y: auto; border-radius: 10px; z-index: 1000;">
+          <h2>Solutions for Soil Erosion</h2>
+          <img src="assets/AfricaPicNASA.png" alt="special">
+          <p><b>Zero Tillage(No-Till Farming): </b>Zero-tillage farming is a method where crops are planted without
+            traditional tilling, preserving soil structure and moisture while reducing erosion. This approach is
+            especially beneficial for Kisumu, where it helps combat soil erosion from frequent rainstorms, retains
+            moisture in drought-prone areas, and lowers labor and plowing costs, particularly aiding female farmers who
+            may lack access to machinery. To implement, female farmers should plant cover crops for soil protection, use
+            crop residues like maize stalks as mulch, and receive training on seed drills for direct planting into
+            undisturbed soil.</p>
+
+          <p>Statistical analysis shows that zero-tillage can reduce soil erosion by up to <b>90%</b> compared to
+            conventional methods, increase soil moisture retention by <b>30%</b> and help farmers save up to <b>40%</b>
+            on labor costs associated with plowing and field preparation, making it a highly effective and
+            cost-efficient farming practice.</p>
+
+          <div class="more-text" id="moreTextk2" style="display: none;">
+            <p><b>Economic Benfits: </b>Increased productivity from improved soil health and moisture retention can
+              boost crop yields by 20-30%, translating into higher incomes that empower female farmers to invest in
+              their families and communities. Additionally, savings on labor and equipment can be redirected toward
+              education or healthcare, enhancing overall quality of life. 
+              <b>Impact on Community: </b> Improved agricultural practices enhance food production, boosting food
+              security within the community. As female farmers gain access to training and resources, they are empowered
+              economically and socially, often leading initiatives that benefit the wider community. Additionally,
+              zero-tillage promotes sustainable agriculture by preserving soil health, ensuring long-term ecological
+              benefits.
+            </p>
+          </div>
+          <button class="btn1" id="toggleMorek2">Show More</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Open and close popup logic
+    function openPopup(popupId) {
+      document.getElementById(popupId).style.display = 'block';
+    }
+
+    function closePopup(popupId) {
+      document.getElementById(popupId).style.display = 'none';
+    }
+
+    function toggleMore(buttonId, textId) {
+      const button = document.getElementById(buttonId);
+      const moreText = document.getElementById(textId);
+
+      if (moreText.style.display === 'none') {
+        moreText.style.display = 'block';
+        button.innerHTML = 'Show Less';
+      } else {
+        moreText.style.display = 'none';
+        button.innerHTML = 'Show More';
+      }
+    }
+
+    // Event listeners for opening popups
+    document.getElementById('openPopupk1').addEventListener('click', () => openPopup('popupk1'));
+    document.getElementById('openPopupk2').addEventListener('click', () => openPopup('popupk2'));
+
+
+    // Event listeners for toggling "Show More / Show Less"
+    document.getElementById('toggleMorek1').addEventListener('click', () => toggleMore('toggleMorek1', 'moreTextk1'));
+    document.getElementById('toggleMorek2').addEventListener('click', () => toggleMore('toggleMorek2', 'moreTextk2'));
+
+
+    // Close popup when clicking outside of it
+    window.addEventListener('click', function (event) {
+      const popupk1 = document.getElementById('popupk1');
+      const popupk2 = document.getElementById('popupk2');
+      const popupk3 = document.getElementById('popupk3');
+
+      if (popupk1.style.display === 'block' && !popupk1.contains(event.target) && event.target !== document.getElementById('openPopupk1')) {
+        closePopup('popupk1');
+      }
+
+      if (popupk2.style.display === 'block' && !popupk2.contains(event.target) && event.target !== document.getElementById('openPopupk2')) {
+        closePopup('popupk2');
+      }
+
+    });
+  </script>
+  <script>
+    function scrollToSection() {
+      const section = document.getElementById("problem-section");
+      section.scrollIntoView({behavior: 'smooth'});
+    }
+  </script>
+</body>
+
+</html>

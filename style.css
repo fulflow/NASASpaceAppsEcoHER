@@ -794,3 +794,68 @@ input {
   font-family: "Poppins", sans-serif;
   background-color: #f9f9f9;
 }
+
+.popup {
+  display: none;
+  /* Initially hidden */
+  position: fixed;
+  /* Position relative to the viewport */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  /* Ensure it's on top */
+
+  /*Message box*/
+  .chat-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .message-bubble {
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    padding: 15px;
+    max-width: 300px;
+    text-align: center;
+    position: relative;
+  }
+
+  .message-bubble p {
+    margin: 0;
+  }
+
+}
+
+.section__introdescription {
+    background-color: #606c38; /* Light pastel teal background */
+    color: white; /* Text color for readability */
+    padding: 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-top: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+  .header__content .section__introdescription {
+      max-width: 700px; /* Larger width on tablets and bigger screens */
+      font-size: 1.1rem; /* Slightly larger font on medium screens */
+  }
+}
+
+@media (min-width: 1024px) {
+  .header__content .section__introdescription {
+      max-width: 800px; /* Even larger width on desktops */
+      font-size: 1.2rem; /* Larger font size on desktops */
+  }
+}

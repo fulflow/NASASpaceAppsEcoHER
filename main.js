@@ -8,16 +8,16 @@ myGame.createUserAction({
 
 // Using the button and text box to get user input
 document.getElementById('submit-button').addEventListener('click', function() {
-    let userInput = document.getElementById('user-input').value;
-    myGame.message(userInput);
+  let userInput = document.getElementById('user-input').value;
+  myGame.message(userInput);
 
-    const conversationLog = document.getElementById('conversation');
-    const userMessage = document.createElement('li');
-    userMessage.classList.add('user-message');
-    userMessage.textContent = userInput;
-    conversationLog.appendChild(userMessage);
+  const conversationLog = document.getElementById('conversation');
+  const userMessage = document.createElement('li');
+  userMessage.classList.add('user-message');
+  userMessage.textContent = userInput;
+  conversationLog.appendChild(userMessage);
 
-    document.getElementById('user-input').value = '';
+  document.getElementById('user-input').value = '';
 });
 
 myGame.botAction('respond', 'Send a text response to the user', { message: 'What you want to say to the user' }, data => {
@@ -136,3 +136,5 @@ function initAutocomplete() {
 document.addEventListener("DOMContentLoaded", () => {
   initAutocomplete();
 });
+
+//Message box
